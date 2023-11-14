@@ -13,3 +13,10 @@ npm i @angular/fire --force
 
 npm install firebase
 
+npm install @capacitor/camera   
+npm run  build         
+
+npx cap sync     
+
+npm install @ionic/pwa-elements
+
