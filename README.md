@@ -8,3 +8,8 @@ npm install @capacitor/geolocation
 npm install @capacitor/preferences 
 
 npm i https://github.com/RuedaDeRepuesto/capacitor-barcode-scanner
+
+npm i @angular/fire --force
+
+npm install firebase
+
