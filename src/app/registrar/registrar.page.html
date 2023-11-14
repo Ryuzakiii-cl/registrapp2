@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <h1>Registrar Usuario</h1>
+  <ion-card> 
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Apellido:</ion-label>
+        <ion-input [(ngModel)]="apellido" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rut:</ion-label>
+        <ion-input [(ngModel)]="rut" type="text"></ion-input>
+      </ion-item>
+      <ion-list>
+        <ion-item>
+          <ion-select (ionChange)="cargarComuna()" placeholder="Seleccione region" [(ngModel)]="regionSeleccionado">
+            <ion-select-option [value]="i.id" *ngFor="let i of regiones">{{i.nombre}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+        <ion-item>
+          <ion-select placeholder="Seleccione comuna" [(ngModel)]="comunaSeleccionada">
+            <ion-select-option [value]="i.id" *ngFor="let i of comunas">{{i.nombre}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input [(ngModel)]="email" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Usuario:</ion-label>
+        <ion-input [(ngModel)]="usuario" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña:</ion-label>
+        <ion-input [(ngModel)]="contrasena" type="password"></ion-input>
+      </ion-item>
+      
+    </ion-card-content>
+    <ion-row class="ion-justify-content-center ion-text-center">
+      <ion-col>
+        <ion-button (click)="registro()" >Registrar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="limpiarCampos()" >Limpiar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+
+
+

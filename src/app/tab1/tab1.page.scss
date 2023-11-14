@@ -1,0 +1,47 @@
+ion-content {
+    display: flex;
+    margin-top: 50px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.side-button {
+    margin-top: 30px;
+    margin-left: 70px; 
+}
+
+.duoc {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 0 5px white, 0 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    margin: auto;
+    margin-top: 50px;
+    animation: rotarAnimacion 3.5s infinite;
+}
+
+@keyframes rotarAnimacion {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    95% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

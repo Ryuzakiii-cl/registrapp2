@@ -1,0 +1,23 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="primary">
+    <ion-title>
+      Página no encontrada
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+  <ion-img src="/assets/imagenes/ups.png"></ion-img>
+    <ion-toolbar>
+      <div class="ion-text-center">
+        <h1>Sorry no existe la pagina!!!</h1>
+      </div>
+    </ion-toolbar>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-button [routerLink]="['/tabs/tab1']" routerLinkActive="router-link-active" class="ion-margin-top">
+    <ion-icon name="home" slot="end"></ion-icon>
+    Volver al Home
+  </ion-button>
+</ion-footer>

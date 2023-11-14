@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Recuperar Contraseña</h1>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Usuario:</ion-label>
+        <ion-input [(ngModel)]="usuario" type="text"></ion-input>
+      </ion-item>
+      
+      <ion-item *ngIf="passwordActual">
+        <ion-label>Contraseña Actual:</ion-label>
+        <ion-input [(ngModel)]="passwordActual" type="text" readonly></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!passwordActual">
+        <ion-button (click)="buscarUsuario()">Buscar Usuario</ion-button>
+      </ion-item>
+
+      <ion-item *ngIf="passwordActual">
+        <ion-label>Nueva Contraseña:</ion-label>
+        <ion-input [(ngModel)]="nuevaPassword" type="password"></ion-input>
+      </ion-item>
+
+      <ion-row class="ion-justify-content-center ion-text-center">
+        <ion-col>
+          <ion-button (click)="cambiarPassword()">Cambiar Contraseña</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="limpiarCampos()">Limpiar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+

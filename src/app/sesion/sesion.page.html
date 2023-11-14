@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>RegistrApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item >
+      <div class="bienve">
+      <h1>Bienvenido/a {{usuario}}</h1>
+    </div>
+    </ion-item>
+  </ion-list>
+  <div class="alerta">
+    <ion-button id="present-alert">No Presionar!</ion-button>
+    <ion-alert
+
+      trigger="present-alert"
+      header="¿Tu mama sabe que eres fan de kunno? ಠ_ಠ"
+      [buttons]="alertButtons"
+      [inputs]="alertInputs"
+      backdropDismiss="false"
+    ></ion-alert>
+</div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="anto()">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer class="button-container ion-text-center">
+  <ion-button  (click)="cerrarSesion()">Cerrar sesion</ion-button>
+</ion-footer> 

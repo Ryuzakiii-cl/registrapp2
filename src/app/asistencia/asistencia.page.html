@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/sesion" text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Asistencia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="registroA bounce">
+    <H1>Clase Registrada</H1>
+  </div>
+  <div>
+    <ion-img *ngIf="capturedImage" [src]="capturedImage" class="zoom-in"></ion-img>
+  </div>
+</ion-content>
+
+
+
+<ion-content class="rotate"><br>
+  <div class="registroA ">
+    {{ resultadoEscaneo }}
+  </div>
+
+  <div class="registroA">
+    <p>Nombre: {{ nombre }}</p>
+    <p>Rut: {{ rut }}</p>
+    <p>Correo: {{ correo }}</p>
+  </div>
+
+  <div class="registroA">
+    <p>Fecha: {{ timestamp1 }}</p>
+    <p>Hora: {{ timestamp2 }}</p>
+  </div>
+
+
+  <div class="registroA">
+    <p>Coordenadas: {{ coordenadas }}</p>
+  </div>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <div class="boton-asistencia">
+
+    <ion-button (click)="cerrarSesion()">
+      Cerrar Sesion
+    </ion-button>
+  </div>
+  <div>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="openFrontCamera()">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-footer>
